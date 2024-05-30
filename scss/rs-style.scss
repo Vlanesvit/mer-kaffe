@@ -27,7 +27,7 @@ $minWidth: 320px;
 $maxWidth: 1920px;
 // Ширина ограничивающего контейнера (ширина контейнера по макету + раддинги)
 $paddingContainer: 0px;
-$maxWidthContainer: calc(375px + ($paddingContainer * 2));
+$maxWidthContainer: calc(1440px + ($paddingContainer * 2));
 
 // Брейк-поинты
 $pc: 1169.98px; // ПК, ноутбуки, некоторые планшеты в горизонтальном положении

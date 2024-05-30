@@ -129,7 +129,7 @@ function tabs() {
 				if (tabsActiveHashBlock && index == tabsActiveHash[1]) {
 					tabsTitles[index].classList.toggle('_tab-active');
 				}
-				tabsContentItem.hidden = !tabsTitles[index].classList.contains('_tab-active');
+				// tabsContentItem.hidden = !tabsTitles[index].classList.contains('_tab-active');
 			});
 		}
 	}
@@ -150,18 +150,20 @@ function tabs() {
 			tabsContent.forEach((tabsContentItem, index) => {
 				if (tabsTitles[index].classList.contains('_tab-active')) {
 					if (tabsBlockAnimate) {
-						_slideDown(tabsContentItem, tabsBlockAnimate);
+						// _slideDown(tabsContentItem, tabsBlockAnimate);
+						tabsContentItem.classList.add('_tab-active');
 					} else {
-						tabsContentItem.hidden = false;
+						// tabsContentItem.hidden = false;
 					}
 					// if (isHash && !tabsContentItem.closest('.popup')) {
 					// 	setHash(`tab-${tabsBlockIndex}-${index}`);
 					// }
 				} else {
 					if (tabsBlockAnimate) {
-						_slideUp(tabsContentItem, tabsBlockAnimate);
+						// _slideUp(tabsContentItem, tabsBlockAnimate);
+						tabsContentItem.classList.remove('_tab-active');
 					} else {
-						tabsContentItem.hidden = true;
+						// tabsContentItem.hidden = true;
 					}
 				}
 			});
