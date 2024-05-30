@@ -229,7 +229,7 @@
 }
 .main .tabs__body h6 {
   font-weight: 400;
-  margin: 0px 0px 10px;
+  margin: 0px 0px 5px;
 }
 .main .tabs__body .border {
   border: 1px solid var(--font-color);
@@ -244,7 +244,7 @@
   border-color: #fff;
 }
 .main .tabs__body ul li:not(:last-child) {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 .main .tabs__body ul li .sub {
   display: -webkit-box;
