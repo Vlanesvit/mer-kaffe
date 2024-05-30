@@ -27,7 +27,6 @@ mainTabsButtons.forEach(button => {
 			document.documentElement.classList.add('_white-version');
 		} else {
 			document.documentElement.classList.remove('_white-version');
-
 		}
 	})
 });

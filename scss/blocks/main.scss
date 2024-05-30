@@ -46,7 +46,19 @@
 				width: 100%;
 				height: 100%;
 				max-height: 200px;
-				object-fit: contain;
+				object-fit: cover;
+
+				&:first-child {
+					@media (max-width: 767.98px) {
+						display: none;
+					}
+				}
+
+				&:last-child {
+					@media (min-width: 767.98px) {
+						display: none;
+					}
+				}
 			}
 		}
 
@@ -258,33 +270,27 @@
 						margin-bottom: 16px;
 					}
 
-					div {
+					.sub {
 						display: flex;
 						align-items: flex-end;
-						justify-content: space-between;
-						width: 100%;
+					}
 
-						& > span {
-							flex-grow: 1;
-							white-space: nowrap;
-							display: flex;
-							justify-content: flex-end;
-							position: relative;
+					.desc {
+						flex: 1;
+						border-bottom: 1px dashed var(--font-color);
 
-							&::before {
-								content: "";
-								// content: "...................................................................";
-								border-bottom: 1px dashed var(--font-color);
-								flex-grow: 1;
-								display: block;
-								margin: 0px 5px;
-								transition: 0.3s ease 0s;
-								transition-property: border-bottom-color;
+						._white-version & {
+							border-bottom-color: #fff;
+						}
+					}
 
-								._white-version & {
-									border-bottom-color: #fff;
-								}
-							}
+					.desc span {
+						position: relative;
+						background: #fff;
+						top: 1px;
+
+						._white-version & {
+							background: var(--primary-color);
 						}
 					}
 				}
@@ -307,12 +313,20 @@
 		// .main__contact_list
 		&_list {
 			width: 100%;
+			@media (min-width: 767.98px) {
+				display: flex;
+			}
 
 			li {
 				width: 100%;
 
 				&:not(:last-child) {
-					margin-bottom: 16px;
+					margin-right: 16px;
+
+					@media (max-width: 767.98px) {
+						margin-right: 0px;
+						margin-bottom: 16px;
+					}
 				}
 
 				a {
@@ -328,6 +342,10 @@
 					color: var(--font-color);
 					transition: 0.3s ease 0s;
 					transition-property: border-color, color;
+
+					@media (max-width: 374.98px) {
+						font-size: 30px;
+					}
 
 					._white-version & {
 						border-color: #fff;
