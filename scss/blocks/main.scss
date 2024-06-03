@@ -221,6 +221,7 @@
 		&__body {
 			font-weight: 300;
 			font-size: 20px;
+			line-height: 120%;
 			opacity: 0;
 			display: none;
 			transition: opacity 0.3s ease 0s;
@@ -287,7 +288,7 @@
 					.desc span {
 						position: relative;
 						background: #fff;
-						top: 1px;
+						top: 2px;
 
 						._white-version & {
 							background: var(--primary-color);
